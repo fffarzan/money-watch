@@ -2,6 +2,7 @@
 
 <template>
 	<section class="transaction-record">
+		<img />
 		<div class="transaction-record__cat-info">
 			<span>CatName</span>
 			<span>SubCatName</span>
