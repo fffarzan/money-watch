@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps, computed } from 'vue'
+import BaseIcon from '@/components/DSM/BaseIcon.vue'
 
 const props = defineProps({
 	transactionData: Object,
@@ -11,7 +12,7 @@ const transactionTime = computed(() => props.transactionData.datetime)
 
 <template>
 	<section class="transaction-record">
-		<img />
+		<BaseIcon icon="mdi-account" />
 		<div class="transaction-record__cat-info">
 			<span>{{ transactionData.walletCategory }}</span>
 			<span>{{ transactionData.walletSubCategory }}</span>
