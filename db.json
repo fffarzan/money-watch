@@ -1,0 +1,20 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "amount": "12,000",
+      "datetime": "Tue, 02 Jul 2019 00:56:38 GMT",
+      "note": "A perfect shopping",
+      "walletCategory": "Shopping",
+      "walletSubCategory": "Clothes"
+    },
+    {
+      "id": "2",
+      "amount": "12,000",
+      "datetime": "Tue, 02 Jul 2019 00:56:38 GMT",
+      "note": "A perfect shopping",
+      "walletCategory": "Shopping",
+      "walletSubCategory": "Clothes"
+    }
+  ]
+}

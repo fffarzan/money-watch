@@ -1,22 +1,31 @@
 <script setup>
+import { defineProps, computed } from 'vue'
 import BaseIcon from '@/components/DSM/BaseIcon.vue'
+
+const props = defineProps({
+	transactionData: Object,
+})
+
+const transactionDate = computed(() => props.transactionData.datetime)
+const transactionTime = computed(() => props.transactionData.datetime)
 </script>
 
 <template>
 	<section class="transaction-record">
 		<BaseIcon icon="mdi-account" />
 		<div class="transaction-record__cat-info">
-			<span>کتگوری</span>
-			<span>زیر کتکوری</span>
+			<span>{{ transactionData.walletCategory }}</span>
+			<span>{{ transactionData.walletSubCategory }}</span>
 		</div>
 		<div class="transaction-record__datetime">
-			<span>4/12/01</span>
-			<span>11:24</span>
+			<span>{{ transactionDate }}</span>
+			<span>{{ transactionTime }}</span>
 		</div>
 		<div>
 			<span>+</span>
-			<span>120,000</span>
-			(<span>IRR</span>)
+			<span>{{ transactionData.amount }}</span>
+			(<span>{{ transactionData.currency }}</span
+			>)
 		</div>
 	</section>
 </template>

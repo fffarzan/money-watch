@@ -2,6 +2,7 @@
 
 <template>
 	<section class="sub-category">
+		<img />
 		<div class="sub-category__sub-cat-info">
 			<span>SubCatName</span>
 			<span>Type</span>

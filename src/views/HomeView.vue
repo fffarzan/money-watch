@@ -1,7 +1,3 @@
-<script setup>
-import TransactionRecord from '@/components/TransactionRecord.vue'
-</script>
+<script setup></script>
 
-<template>
-	<TransactionRecord />
-</template>
+<template><div></div></template>
