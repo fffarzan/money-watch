@@ -1,20 +1,30 @@
-<script setup></script>
+<script setup>
+import { defineProps, computed } from 'vue'
+
+const props = defineProps({
+	transactionData: Object,
+})
+
+const transactionDate = computed(() => props.transactionData.datetime)
+const transactionTime = computed(() => props.transactionData.datetime)
+</script>
 
 <template>
 	<section class="transaction-record">
 		<img />
 		<div class="transaction-record__cat-info">
-			<span>CatName</span>
-			<span>SubCatName</span>
+			<span>{{ transactionData.walletCategory }}</span>
+			<span>{{ transactionData.walletSubCategory }}</span>
 		</div>
 		<div class="transaction-record__datetime">
-			<span>4/12/01</span>
-			<span>11:24</span>
+			<span>{{ transactionDate }}</span>
+			<span>{{ transactionTime }}</span>
 		</div>
 		<div>
 			<span>+</span>
-			<span>120,000</span>
-			(<span>IRR</span>)
+			<span>{{ transactionData.amount }}</span>
+			(<span>{{ transactionData.currency }}</span
+			>)
 		</div>
 	</section>
 </template>
