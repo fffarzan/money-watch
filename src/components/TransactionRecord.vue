@@ -1,11 +1,13 @@
-<script setup></script>
+<script setup>
+import BaseIcon from '@/components/DSM/BaseIcon.vue'
+</script>
 
 <template>
 	<section class="transaction-record">
-		<img />
+		<BaseIcon icon="mdi-account" />
 		<div class="transaction-record__cat-info">
-			<span>CatName</span>
-			<span>SubCatName</span>
+			<span>کتگوری</span>
+			<span>زیر کتکوری</span>
 		</div>
 		<div class="transaction-record__datetime">
 			<span>4/12/01</span>
