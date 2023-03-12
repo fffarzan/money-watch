@@ -1,12 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import repositoryService from '@/services/repositoryService'
+
+import transactionService from '@/services/transactionService'
+
 import TransactionRecord from '@/components/TransactionRecord.vue'
 
 const transactionsData = ref([])
 
 async function getTransactionRecords() {
-	const data = await repositoryService.transactionService.httpGetTransactions()
+	const data = await transactionService.httpGetTransactions()
 	transactionsData.value = data
 }
 
